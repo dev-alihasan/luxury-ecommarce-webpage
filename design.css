@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.left-col,
+.right-col {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+}
+
+.left-col {
+  background: #e99b7c;
+}
+
+.right-col {
+  left: 50%;
+}
+
+.upper {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  background: #e0114f;
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 3s;
+}
+
+.bottom {
+  position: absolute;
+  top: 50%;
+  height: 50vh;
+  width: 100%;
+  background: url("img-2.jpeg") no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 4.2s;
+}
+
+@media (max-width: 900px) {
+  .left-col {
+    width: 100%;
+  }
+  .right-col {
+    top: 100%;
+    left: 0%;
+    width: 100%;
+  }
+}
+
+.logo {
+  font-family: "Italiana", serif;
+  color: #e3dce2;
+  position: fixed;
+  margin: 1em;
+  font-size: 1em;
+  font-weight: bolder;
+  z-index: 1;
+}
+
+.year {
+  position: absolute;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  bottom: 8%;
+  font-weight: bolder;
+  transform: rotate(-90deg);
+  left: 0%;
+}
+
+.buy {
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0%;
+  top: 40.6%;
+  margin: 1.4em;
+  cursor: pointer;
+  background-color: rgba(228, 228, 228, 0.452);
+  padding: 0.5em;
+  border-radius: 4em;
+}
+
+.cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 80%;
+  background: url("img-1.jpg") no-repeat 30% 50%;
+  background-size: cover;
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2.6s;
+}
+
+.data {
+  position: absolute;
+  top: 36%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  color: #e3dce2;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+#name {
+  font-weight: bolder;
+}
+
+#artist {
+  font-size: 10px;
+}
+
+.about {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.about h1 {
+  font-weight: bolder;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about p {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
+.media {
+  margin-top: 40px;
+}
+
+.media p {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.media ul {
+  position: absolute;
+  list-style: none;
+  left: -35px;
+}
+
+.media ul li {
+  display: inline-block;
+  color: #b6b6b6;
+  padding-right: 10px;
+}
+
+.data2 {
+  position: absolute;
+  top: 12%;
+  left: 28%;
+  color: #cdbba5;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.block-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 50%;
+}
+
+.block-cover::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #cc8b65;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 2s;
+}
+
+@keyframes rev-block {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.upper-block {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+}
+
+.upper-block::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #e4dcaf;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 2.4s;
+}
+
+.block-bottom {
+  position: absolute;
+  top: 50%;
+  height: 50vh;
+  width: 100%;
+}
+
+.block-bottom::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #000;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 3.6s;
+}
